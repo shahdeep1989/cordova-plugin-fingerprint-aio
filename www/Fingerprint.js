@@ -64,4 +64,9 @@ Fingerprint.prototype.loadBiometricSecret = function (params, successCallback, e
   );
 };
 
+if (!window.plugins) {
+  window.plugins = {};
+}
+window.plugins.Fingerprint = Fingerprint;
+
 module.exports = new Fingerprint();
